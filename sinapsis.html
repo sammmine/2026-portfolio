@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&family=Margarine&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <title>Sinapsis</title>
+</head>
+
+<body class="site_project_containers sinapsis">
+    <aside class="sidebar">
+        <header class="back_nav font-decorative">
+            <a href="index.html#projects">← Back to Projects</a>
+        </header>
+        <nav class="side_nav font-primary">
+            <ul role="list">
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#empathize">Empathize</a></li>
+                <li><a href="#define">Define</a></li>
+                <li><a href="#ideate">Ideate</a></li>
+                <li><a href="#prototype">Prototype</a></li>
+                <li><a href="#test">Test</a></li>
+                <li><a href="#takeaways">Takeaways</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div class="content">
+        <div class="project_title">
+            <h3>On Engineering Inclusivity</h3>
+        </div>
+
+        <section id="introduction" class="project_desc">
+            <video controls loop muted>
+                <source src="assets/sinapsis/Sinapsis_Loop.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h4 class="font-decorative">Introduction</h4>
+            <p>Sinapsis is an adaptive learning ecosystem designed for UX FindIT! Competition 2026, created to address
+                the systemic educational barriers faced by neurodivergent children (specifically those with Autism,
+                ADHD, and Dyslexia) in Indonesia. For this project, our team conceptualized, designed, and tested an
+                end-to-end digital learning experience.</p>
+            <div class="two_images">
+                <figure class="image_caption">
+                    <a href="https://ixdf.org/literature/article/design-thinking-a-quick-overview" target="_blank">
+                        <img src="assets/sinapsis/Design_Thinking.png" alt="Design Thinking Framework">
+                    </a>
+                    <figcaption class="img_caption font-decorative">Click the image to learn more about the framework!
+                    </figcaption>
+                </figure>
+                <p>Our product development workflow was anchored in the <strong>Design Thinking Framework</strong>—a
+                    five-stage human-centered approach that allowed us to iterate between understanding user needs and
+                    delivering an accessible digital platform.</p>
+            </div>
+        </section>
+
+        <section id="empathize" class="project_desc">
+            <h4 class="font-decorative">Empathize</h4>
+            <p>We began our research by asking:</p>
+            <div class="highlight_box">
+                <p>How do neurodivergent children truly process information, and why do conventional digital learning
+                    platforms fail them?</p>
+            </div>
+            <p>In order to understand the spectrum of neurodiversity in Indonesia a bit better, we conducted
+                semi-structured interviews with six key stakeholders: special education experts, shadow teachers,
+                parents, and neurodivergent friends. From their lived experiences, we synthesized our qualitative data
+                into an <strong>Empathy Map</strong> to capture what neurodivergent learners say, think, feel, and do.
+            </p>
+            <div class="empathy_map">
+                <div class="empathy_grid">
+                    <div class="empathy_quadrant">
+                        <h5 class="empathy_title">Says</h5>
+                        <div class="empathy_notes">
+                            <div class="empathy_note">
+                                <p>“I prefer studying using videos or pictures.”</p>
+                            </div>
+                            <div class="empathy_note">
+                                <p>“If the interface/<wbr>layout is too cluttered, I get confused.”</p>
+                            </div>
+                            <div class="empathy_note">
+                                <p>“I easily get distracted while studying.”</p>
+                            </div>
+                            <div class="empathy_note">
+                                <p>“Studying becomes enjoyable when it's fun.”</p>
+                            </div>
+                        </div>
+                        <p class="empathy_summary">Children prefer simple, visual, and clear learning methods.</p>
+                    </div>
+
+                    <div class="empathy_quadrant">
+                        <h5 class="empathy_title">Thinks</h5>
+                        <div class="empathy_notes">
+                            <div class="empathy_note">
+                                <p>“Studying is hard when there is too much text.”</p>
+                            </div>
+                            <div class="empathy_note">
+                                <p>“It's easier to understand when there are examples.”</p>
+                            </div>
+                            <div class="empathy_note">
+                                <p>“Studying feels better when it isn't complicated.”</p>
+                            </div>
+                            <div class="empathy_note">
+                                <p>Likes being able to learn in their own way.</p>
+                            </div>
+                        </div>
+                        <p class="empathy_summary">Children think learning is easier when it is straightforward and
+                            tailored to their own preferences.</p>
+                    </div>
+
+                    <div class="empathy_quadrant">
+                        <h5 class="empathy_title">Feels</h5>
+                        <div class="empathy_notes">
+                            <div class="empathy_note">
+                                <p>Gets bored quickly while studying.</p>
+                            </div>
+                            <div class="empathy_note">
+                                <p>Feels confused when there is too much material.</p>
+                            </div>
+                            <div class="empathy_note">
+                                <p>Gets frustrated when they don't understand.</p>
+                            </div>
+                            <div class="empathy_note">
+                                <p>Feels happy when able to finish/accomplish something.</p>
+                            </div>
+                        </div>
+                        <p class="empathy_summary">Children often feel bored, confused, and frustrated when they don't
+                            understand the material.</p>
+                    </div>
+
+                    <div class="empathy_quadrant">
+                        <h5 class="empathy_title">Does</h5>
+                        <div class="empathy_notes">
+                            <div class="empathy_note">
+                                <p>Often procrastinates on studying.</p>
+                            </div>
+                            <div class="empathy_note">
+                                <p>Stops studying once bored.</p>
+                            </div>
+                            <div class="empathy_note">
+                                <p>Prefers studying through videos or games.</p>
+                            </div>
+                            <div class="empathy_note">
+                                <p>Studies for long stretches once focused.</p>
+                            </div>
+                        </div>
+                        <p class="empathy_summary">Children tend to delay or quit studying when uninterested, but can
+                            maintain high focus for long periods when the learning method is right for them.</p>
+                    </div>
+                </div>
+            </div>
+            <p>Through our desk research we also began to understand the key differences between inclusive and adaptive.
+                This distinction is fundamental to understanding how technology meets the needs of neurodivergent
+                individuals.</p>
+            <div class="themes">
+                <div class="theme_box cols-2">
+                    <div class="theme_box_text">
+                        <p>Inclusive design refers to universal accessibility features (e.g., sensory inputs adjustable
+                            for all users).</p>
+                    </div>
+                    <div class="theme_box_text">
+                        <p>Adaptive design involves real-time personalization (e.g., AI-driven adjustments to task
+                            difficulty based on individual performance).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="define" class="project_desc">
+            <h4 class="font-decorative">Define</h4>
+            <p>We mapped out the key <strong>pain points</strong>—such as text-heavy interfaces, rigid learning
+                schedules, high
+                cognitive loads, and lack of real-time focus intervention—and framed them into actionable <strong>How
+                    Might We</strong> statements:</p>
+            <div class="hmw_container">
+                <div class="hmw_grid">
+                    <div class="hmw_card">
+                        <div class="hmw_badge">How Might We - 1</div>
+                        <div class="hmw_body">
+                            <p>How might we help neurodivergent children maintain focus during learning by minimizing
+                                distractions and providing timely interventions when attention wanes?</p>
+                        </div>
+                    </div>
+
+                    <div class="hmw_card">
+                        <div class="hmw_badge">How Might We - 2</div>
+                        <div class="hmw_body">
+                            <p>How might we present learning materials that are more visual, interactive, and easily
+                                understood by children?</p>
+                        </div>
+                    </div>
+
+                    <div class="hmw_card">
+                        <div class="hmw_badge">How Might We - 3</div>
+                        <div class="hmw_body">
+                            <p>How might we design a structured yet flexible learning system that accommodates each
+                                child's rhythm and schedule?</p>
+                        </div>
+                    </div>
+
+                    <div class="hmw_card">
+                        <div class="hmw_badge">How Might We - 4</div>
+                        <div class="hmw_body">
+                            <p>How might we deliver a personalized and adaptive learning experience tailored to each
+                                child's ability, learning pace, and focus level?</p>
+                        </div>
+                    </div>
+
+                    <div class="hmw_card">
+                        <div class="hmw_badge">How Might We - 5</div>
+                        <div class="hmw_body">
+                            <p>How might we empower parents and educators to monitor children's learning progress and
+                                effectively manage screen time and app usage?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ideate" class="project_desc">
+            <h4 class="font-decorative">Ideate</h4>
+            <p>During our ideation phase, we first established the identity of our product.</p>
+            <div class="two_images">
+                <img src="assets/sinapsis/Logo.png" alt="Sinapsis Logo">
+                <p>The name “Sinapsis” (synapse: the neural junction connecting signals) signifies learning while
+                    symbolizing the platform's role as a bridge between child, parent, and teacher. Visually, the logo
+                    combines a test tube silhouette (representing a structured AI tech ecosystem) with emerging dendrite
+                    sprouts (symbolizing individual growth and neurodivergent potential).</p>
+            </div>
+            <p>To solve our <strong>How Might We</strong> questions, we ran <strong>Crazy 8</strong>'s sketching
+                sessions and prioritized
+                feature
+                ideas using an
+                <strong>Impact-Effort Matrix</strong>. This led to three core product mechanisms:
+            </p>
+            <div class="themes">
+                <div class="theme_box cols-3">
+                    <div class="theme_box_text">
+                        <h6>Hyper-Personalized Adaptive Learning AI</h6>
+                        <p>Automatically adjusts exercise difficulty based on
+                            real-time speed and accuracy.
+                        </p>
+                    </div>
+                    <div class="theme_box_text">
+                        <h6>Smart Distraction Detection</h6>
+                        <p>Detects focus loss using time-threshold algorithms and triggers
+                            a friendly mascot intervention.</p>
+                    </div>
+                    <div class="theme_box_text">
+                        <h6>Dual-Dashboard Ecosystem</h6>
+                        <p>Separate tailored flows for children (gamified, visual, low-noise)
+                            and guardians (data-driven, customizable).</p>
+                    </div>
+                </div>
+            </div>
+            <figure class="image_caption">
+                <a href="https://sciaverma7.medium.com/rapid-brainstorming-with-crazy-eights-2d0d992e91ae"
+                    target="_blank">
+                    <img src="assets/sinapsis/Crazy_8.png" alt="Sinapsis Crazy 8" style="max-width: 700px;">
+                </a>
+                <figcaption class="img_caption font-decorative">Click the image to learn more about Crazy 8 Method!
+                </figcaption>
+            </figure>
+        </section>
+
+        <section id="prototype" class="project_desc">
+            <h4 class="font-decorative">Prototype</h4>
+            <p>We translated our concepts into low-fidelity wireframes and built high-fidelity interactive prototypes
+                across mobile platforms.</p>
+            <figure class="image_caption">
+                <a href="https://www.figma.com/proto/xMPdJqnKnml0DH6PmzQdWs/Sinapsis---FindIT-UX-2026?node-id=123-1200&viewport=1509%2C23%2C0.28&t=y9a9d8TB940mZHQZ-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=123%3A1200&show-proto-sidebar=1"
+                    target="_blank">
+                    <img src="assets/sinapsis/Prototype.png" alt="Sinapsis Prototype">
+                </a>
+                <figcaption class="img_caption font-decorative">Click the image to see the interactive prototype!
+                </figcaption>
+            </figure>
+        </section>
+
+        <section id="test" class="project_desc">
+            <h4 class="font-decorative">Test</h4>
+            <p>To validate our design decisions, we conducted Heuristic Evaluations (mapped to Nielsen’s 10 principles)
+                and Usability Testing on Maze with both parents and neurodivergent children.</p>
+            <p>Through user feedback, we refined three critical areas: </p>
+            <div class="themes">
+                <div class="theme_box cols-3">
+                    <div class="theme_box_text">
+                        <h6>Onboarding Guidance</h6>
+                        <p>Added interactive step-by-step tutorials to prevent initial user
+                            confusion.</p>
+                    </div>
+                    <div class="theme_box_text">
+                        <h6>Interaction Targets</h6>
+                        <p>Expanded card touch targets to full-container click areas to eliminate
+                            navigation misclicks.</p>
+                    </div>
+                    <div class="theme_box_text">
+                        <h6>Data Visualization</h6>
+                        <p>Replaced text-heavy reports in the guardian dashboard with dynamic,
+                            scannable statistical graphs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="takeaways" class="project_desc">
+            <h4 class="font-decorative">Takeaways</h4>
+            <p>This project was a massive learning curve. While we didn't take home a trophy, but reaching the finals
+                and
+                securing 7th place on the leaderboard was already a deeply rewarding milestone that gave us the chance
+                to showcase Sinapsis to the judges.</p>
+            <p>Looking back, the Empathize phase was the most memorable part of the process because it was where real,
+                eye-opening learning happened. A senior once told me, <i>"Designing for disability is not designing for
+                    a
+                    niche edge case—it’s designing for all. What begins as an accommodation for a specific group can end
+                    up
+                    empowering everyone."</i> That perspective completely shifted how we approached the
+                problem. It closely aligns with the work of sociologist Lorna Wing, who bridged humanity with the
+                concept of the autism spectrum. She demonstrated that there is no rigid boundary separating the
+                neurotypical from the neurodivergent. Neurodiverse traits are widely distributed across all humans,
+                meaning those who "have" or "do not have" these traits cannot be neatly divided—we are all part of the
+                same spectrum.</p>
+            <div class="two_images">
+                <img src="assets/sinapsis/shinchan_kayang.JPG" alt="Team">
+                <p>My personal motto has always been: If I feel stupid, that means I’m learning. Navigating the
+                    complexities of inclusive design challenged my assumptions, expanded my empathy, and pushed me out
+                    of my comfort zone. What a journey it was!</p>
+            </div>
+        </section>
+    </div>
+</body>
