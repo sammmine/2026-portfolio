@@ -34,7 +34,6 @@ ol[role="list"] {
 
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
 }
 
 /* Set core root defaults */
@@ -48,7 +47,6 @@ body {
     text-rendering: optimizeSpeed;
     letter-spacing: -0.01em;
     font-family: "Manrope", sans-serif;
-    overflow-x: hidden;
 }
 
 /* All elements that don't have a class get default styles */
@@ -659,6 +657,10 @@ p,
 }
 
 @media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
     .site_project,
     .site_project_containers {
         margin: var(--space-m) var(--space-m);
