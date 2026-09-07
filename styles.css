@@ -1,0 +1,797 @@
+/*
+ * CORE CONFIG
+ * This powers everything from utility class generation to breakpoints
+ * to enabling/disabling pre-built components/utilities.
+ */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    letter-spacing: -0.01em;
+    font-family: "Manrope", sans-serif;
+    overflow-x: hidden;
+}
+
+/* All elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+}
+
+:focus {
+    outline: 2px dashed #00ff19;
+    /* outline-offset: 0.2rem; */
+}
+
+main:focus {
+    outline: none;
+}
+
+/* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+    --step--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
+    --step--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
+    --step-0: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+    --step-1: clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem);
+    --step-2: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
+    --step-3: clamp(1.944rem, 1.771rem + 0.8651vw, 2.4414rem);
+    --step-4: clamp(2.3328rem, 2.0827rem + 1.2504vw, 3.0518rem);
+    --step-5: clamp(2.7994rem, 2.4462rem + 1.7658vw, 3.8147rem);
+}
+
+/* @link https://utopia.fyi/space/calculator?c=320,18,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+    --space-3xs: clamp(0.3125rem, 0.3125rem + 0vw, 0.3125rem);
+    --space-2xs: clamp(0.5625rem, 0.5408rem + 0.1087vw, 0.625rem);
+    --space-xs: clamp(0.875rem, 0.8533rem + 0.1087vw, 0.9375rem);
+    --space-s: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+    --space-m: clamp(1.6875rem, 1.6223rem + 0.3261vw, 1.875rem);
+    --space-l: clamp(2.25rem, 2.163rem + 0.4348vw, 2.5rem);
+    --space-xl: clamp(3.375rem, 3.2446rem + 0.6522vw, 3.75rem);
+    --space-2xl: clamp(4.5rem, 4.3261rem + 0.8696vw, 5rem);
+    --space-3xl: clamp(6.75rem, 6.4891rem + 1.3043vw, 7.5rem);
+}
+
+h1,
+.h1 {
+    font-size: var(--step-5);
+}
+
+h2,
+.h2 {
+    font-size: var(--step-4);
+    font-weight: 300;
+}
+
+h3,
+.h3 {
+    font-size: var(--step-3);
+    font-weight: 600;
+}
+
+h4,
+.h4 {
+    font-size: var(--step-2);
+}
+
+h5,
+.h5 {
+    font-size: var(--step-1);
+    font-weight: 300;
+}
+
+h6,
+.h6 {
+    font-size: var(--step--1);
+}
+
+p,
+.p {
+    font-size: var(--step--1);
+    font-weight: 400;
+    line-height: var(--space-m);
+    letter-spacing: 0.02em;
+}
+
+
+/* define some constants */
+.flex {
+    display: flex;
+    align-items: center;
+    gap: var(--space-s);
+}
+
+@media (max-width: 468px) {
+    .flex {
+        flex-wrap: wrap;
+    }
+}
+
+.flex_center {
+    justify-content: center;
+}
+
+.flex_around {
+    justify-content: space-around;
+}
+
+.flex_between {
+    justify-content: space-between;
+}
+
+@media (max-width: 468px) {
+    .flex_around {
+        justify-content: center;
+    }
+}
+
+.text_center {
+    text-align: center;
+}
+
+.text_right {
+    text-align: right;
+}
+
+/* define spacing */
+.padding-top-3xs {
+    padding: var(--space-3xs);
+}
+
+/* create the wrappers */
+.wrapper {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.wrapper_inner {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.font-primary {
+    font-family: "Manrope", sans-serif;
+}
+
+.font-decorative {
+    font-family: "Margarine", sans-serif;
+}
+
+
+/*  */
+/*  */
+/*  */
+
+
+.site {
+    margin: var(--space-m) var(--space-xl);
+}
+
+.header_web_name a {
+    font-size: var(--step-0);
+    color: black;
+    text-decoration: none;
+}
+
+.right_header a {
+    font-size: var(--step--1);
+    text-decoration: none;
+    color: black;
+}
+
+.right_header a:hover {
+    text-decoration: underline;
+    text-underline-offset: var(--space-3xs);
+}
+
+.right_header {
+    justify-content: flex-end;
+    gap: var(--space-xl);
+}
+
+.hero {
+    margin-top: var(--space-2xl);
+}
+
+.hero_text_changer {
+    box-sizing: content-box;
+    gap: var(--space-3xs);
+}
+
+.roles_container {
+    overflow: hidden;
+    display: inline-block;
+    height: var(--step-5);
+    /* line-height: var(--step-5); */
+}
+
+.role {
+    font-size: var(--step-4);
+    display: block;
+    height: var(--step-5);
+    line-height: var(--step-5);
+    padding-left: 6px;
+    color: black;
+    animation: role-change 6s infinite;
+}
+
+@keyframes role-change {
+
+    0%,
+    18% {
+        transform: translateY(0%);
+    }
+
+    25%,
+    43% {
+        transform: translateY(-100%);
+    }
+
+    50%,
+    68% {
+        transform: translateY(-200%);
+    }
+
+    75%,
+    93% {
+        transform: translateY(-300%);
+    }
+
+    100% {
+        transform: translateY(-400%);
+    }
+}
+
+.projects {
+    margin-top: var(--space-2xl);
+}
+
+.projects_title {
+    gap: var(--space-3xs);
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.hamburger span {
+    width: 28px;
+    height: 3px;
+    background-color: black;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    body:has(#menu-toggle:checked) {
+        /* No scroll when hamburger page opened */
+        overflow: hidden;
+    }
+
+    .hamburger {
+        display: flex;
+        position: relative;
+        z-index: 101;
+    }
+
+    .right_header {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2.5rem;
+        transition: right 0.4s ease;
+        z-index: 100;
+    }
+
+    .menu-toggle:checked~.right_header {
+        right: 0;
+        /* Buka menu saat checkbox dicentang */
+    }
+
+    .menu-toggle:checked~.hamburger span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+        /* X animation for hamburger */
+    }
+
+    .menu-toggle:checked~.hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle:checked~.hamburger span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+}
+
+.project_filters {
+    gap: var(--space-xs);
+}
+
+.filter {
+    font-size: var(--step--1);
+    background-color: white;
+    border-radius: 99px;
+    border-style: solid;
+    border-width: 0.8px;
+    border-color: black;
+    padding-inline: var(--space-s);
+    padding-block: var(--space-2xs);
+
+    transition: all 0.2s ease-in-out;
+    user-select: none;
+}
+
+.filter.active {
+    background-color: black;
+    color: white;
+}
+
+.filter:not(.active):hover {
+    cursor: pointer;
+    box-shadow: var(--space-3xs) var(--space-3xs) 0 black;
+}
+
+.grid {
+    margin: var(--space-l) 0;
+    gap: var(--space-l);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+}
+
+.card {
+    text-decoration: none;
+}
+
+.card img {
+    border-radius: var(--space-2xs);
+}
+
+.card_meta {
+    margin-top: var(--space-s);
+}
+
+.card_title {
+    color: black;
+    font-size: var(--step-0);
+}
+
+.card_sub {
+    color: gray;
+    font-size: var(--step--2);
+    text-align: right;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        margin-top: var(--space-l);
+        gap: var(--space-m);
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        align-items: start;
+    }
+
+    .card {
+        text-decoration: none;
+    }
+
+    .card img {
+        border-radius: var(--space-2xs);
+    }
+
+    .card_meta {
+        margin-top: var(--space-xs);
+    }
+
+    .card_title {
+        color: black;
+        font-size: var(--step-0);
+    }
+
+    .card_sub {
+        color: gray;
+        font-size: var(--step--2);
+        text-align: right;
+    }
+
+}
+
+.thumb {
+    position: relative;
+}
+
+.lock_project {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: var(--space-2xs);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    display: none;
+}
+
+.card:has(.lock_project) .thumb:hover {
+    cursor: not-allowed;
+}
+
+.card:hover .lock_project {
+    display: flex;
+}
+
+.lock_project img {
+    width: var(--step-3);
+    height: var(--step-3);
+}
+
+.lock_project h5 {
+    color: white;
+    font-weight: 500;
+    margin: 0;
+}
+
+/*  */
+/*  */
+/*  */
+
+.site_project,
+.site_project_containers {
+    margin: var(--space-m) var(--space-3xl);
+}
+
+.site_project_containers {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: var(--space-l);
+    align-items: start;
+}
+
+.back_nav a {
+    font-size: var(--step--1);
+    color: black;
+    text-decoration: none;
+}
+
+.back_nav a:hover {
+    text-decoration: underline;
+    text-underline-offset: var(--space-3xs);
+}
+
+.sidebar {
+    position: sticky;
+    top: var(--space-l);
+    align-self: start;
+    max-height: calc(100vh - var(--space-2xl));
+    overflow-y: auto;
+}
+
+.side_nav a {
+    color: gray;
+    text-decoration: none;
+}
+
+.side_nav a:hover {
+    text-decoration: underline;
+    line-height: var(--step-l);
+}
+
+.side_nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.side_nav ul ul {
+    margin-top: var(--space-2xs);
+    gap: var(--space-2xs);
+    padding-left: var(--space-s);
+    list-style-type: none;
+}
+
+.project_title {
+    margin: var(--space-m) 0;
+
+}
+
+.project_desc {
+    gap: var(--space-l);
+    display: flex;
+    flex-direction: column;
+}
+
+.project_desc h5 {
+    margin-bottom: 0;
+    color: gray;
+}
+
+.project_desc h6 {
+    margin: 0;
+}
+
+#introduction,
+#logo,
+#designsystem {
+    margin-bottom: var(--space-l);
+}
+
+.two_images,
+.dd_section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-m);
+}
+
+.highlight_box {
+    padding: var(--space-s);
+    background-color: #144224;
+    width: 100%;
+}
+
+.highlight_box p {
+    color: white;
+    font-weight: 600;
+    text-align: center;
+}
+
+.lakara_themes {
+    gap: var(--space-xs);
+    display: flex;
+    flex-direction: column;
+}
+
+.theme_box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-s);
+}
+
+.theme_box_2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-s);
+}
+
+.theme_box_text {
+    padding: var(--space-s);
+    background-color: #144224;
+    color: white;
+}
+
+.theme_box_text h6 {
+    margin: 0;
+}
+
+.theme_box_text p {
+    font-size: var(--step--2);
+    line-height: var(--step-1);
+}
+
+.double_diamond {
+    font-size: var(--step--2);
+    color: gray;
+    font-style: italic;
+    margin-bottom: var(--space-l);
+    text-align: center;
+}
+
+.img_caption {
+    margin-top: var(--space-s);
+}
+
+@media (max-width: 768px) {
+    .site_project,
+    .site_project_containers {
+        margin: var(--space-m) var(--space-m);
+    }
+
+    .site_project_containers {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-m);
+    }
+
+    .sidebar {
+        position: static;
+        max-height: none;
+    }
+
+    .sidebar .side_nav {
+        display: none;
+    }
+
+    .two_images,
+    .dd_section {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .theme_box {
+        grid-template-columns: 1fr;
+    }
+
+    .theme_box_2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .theme_box_2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Logo Philosophy Section */
+.logo_philosophy {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-m);
+}
+
+.logo_philosophy h6 {
+    font-size: var(--step-0);
+    margin: 0;
+}
+
+/* Default: Laptop / Desktop (1 baris = 4 kolom) */
+.philosophy_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-s);
+}
+
+.philosophy_item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-s);
+}
+
+.philosophy_item .theme_box_text,
+.philosophy_item .highlight_box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.philosophy_item .theme_box_text p,
+.philosophy_item .highlight_box p {
+    margin: 0;
+}
+
+.philosophy_item .img_placeholder,
+.philosophy_item img {
+    width: 100%;
+    max-width: 160px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    align-self: center;
+    object-fit: contain;
+}
+
+.philosophy_item .img_placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+    border: 1.5px dashed #ccc;
+    border-radius: 8px;
+    color: #888;
+    font-size: var(--step--2);
+    text-align: center;
+    padding: var(--space-s);
+}
+
+/* Tablet (2 baris = 2 kolom) */
+@media (max-width: 1024px) {
+    .philosophy_grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-m);
+    }
+
+    .philosophy_item .theme_box_text p,
+    .philosophy_item .highlight_box p {
+        font-size: var(--step--1);
+    }
+
+    .philosophy_item .img_placeholder,
+    .philosophy_item img {
+        max-width: 200px;
+    }
+}
+
+/* Handphone (4 baris ke bawah = 1 kolom) */
+@media (max-width: 600px) {
+    .philosophy_grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-m);
+    }
+
+    .philosophy_item .theme_box_text p,
+    .philosophy_item .highlight_box p {
+        font-size: var(--step--1);
+    }
+
+    .philosophy_item .img_placeholder,
+    .philosophy_item img {
+        max-width: 220px;
+    }
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&family=Margarine&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Lana Ginting - Design Engineer</title>
+</head>
+
+<body class="site">
+    <header class="site_header">
+        <div class="flex flex_between">
+            <div class="header_web_name">
+                <a href="" class="font-decorative">Lana Ginting</a>
+            </div>
+
+            <nav class="site_header_nav">
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <label for="menu-toggle" class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <ul role="list" class="right_header flex">
+                    <li><a href="#projects" class="nav_link font-primary">Projects</a></li>
+                    <li><a href="assets/Resume.pdf" class="nav_link font-primary">Resume</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h2>Lana is a design engineer</h2>
+        <div class="hero_text_changer flex">
+            <h2 class="intro_text">who aspires to be </h2>
+            <div class="roles_container">
+                <span class="role font-decorative">inquisitive,</span>
+                <span class="role font-decorative">empathetic,</span>
+                <span class="role font-decorative">creative,</span>
+                <span class="role font-decorative">proud.</span>
+                <span class="role font-decorative">inquisitive,</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="projects_title flex">
+            <h5>Her Curated</h5>
+            <h5 class="font-decorative">Werks</h5>
+            <h5>:</h5>
+        </div>
+
+        <div class="project_filters flex">
+            <button class="filter active" data-filter="all">All</button>
+            <button class="filter" data-filter="software-engineer">Software Engineer</button>
+            <button class="filter" data-filter="product-design">Product Design</button>
+            <button class="filter" data-filter="graphic-3d-design">Graphic & 3D Design</button>
+        </div>
+
+        <div class="grid flex">
+            <a class="card" href="" data-tags="product-design" data-pill="view">
+                <div class="thumb thumb-melek">
+                    <img src="assets/thumbnails/Melek_Thumbnail.png" alt="Melek Prototype" onerror="this.remove()" />
+                    <div class="lock_project">
+                        <img src="assets/lock_white.svg" alt="Lock" />
+                        <h5>Coming Soon</h5>
+                    </div>
+                </div>
+                <div class="card_meta flex flex_between">
+                    <span class="card_title font-decorative">Melek</span>
+                    <span class="card_sub">Gemastik XIX Divisi Desain<br />Pengalaman Pengguna</span>
+                </div>
+            </a>
+
+            <a class="card" href="" data-tags="product-design" data-pill="view">
+                <div class="thumb thumb-sinapsis">
+                    <img src="assets/thumbnails/Sinapsis_Thumbnail.png" alt="Sinapsis Prototype"
+                        onerror="this.remove()" />
+                    <div class="lock_project">
+                        <img src="assets/lock_white.svg" alt="Lock" />
+                        <h5>Coming Soon</h5>
+                    </div>
+                </div>
+                <div class="card_meta flex flex_between">
+                    <span class="card_title font-decorative">Sinapsis</span>
+                    <span class="card_sub">FindIT! 2026<br />UX Competition</span>
+                </div>
+            </a>
+
+            <a class="card" href="hmiflakara.html" data-tags="graphic-3d-design" data-pill="view">
+                <div class="thumb thumb-hmiflakara">
+                    <img src="assets/thumbnails/HMIFLakara_Thumbnail.png" alt="HMIF Lakara Portfolio"
+                        onerror="this.remove()" />
+                </div>
+                <div class="card_meta flex flex_between">
+                    <span class="card_title font-decorative">HMIF<br />Lakara</span>
+                    <span class="card_sub">Himpunan Mahasiswa Informatika<br />(HMIF) ITB 2025/2026</span>
+                </div>
+            </a>
+
+            <a class="card" href="" data-tags="software-engineer" data-pill="view">
+                <div class="thumb thumb-anmategra">
+                    <img src="assets/thumbnails/Anmategra_Thumbnail.png" alt="Anmategra" onerror="this.remove()" />
+                    <div class="lock_project">
+                        <img src="assets/lock_white.svg" alt="Lock" />
+                        <h5>Coming Soon</h5>
+                    </div>
+                </div>
+                <div class="card_meta flex flex_between">
+                    <span class="card_title font-decorative">Anmategra</span>
+                    <span class="card_sub">Anmategra KM ITB<br />2024/2025</span>
+                </div>
+            </a>
+
+            <a class="card" href="" data-tags="software-engineer" data-pill="view">
+                <div class="thumb thumb-littlealchemy">
+                    <img src="assets/thumbnails/LAC_Thumbnail.png" alt="Little Alchemy Cookbook"
+                        onerror="this.remove()" />
+                    <div class="lock_project">
+                        <img src="assets/lock_white.svg" alt="Lock" />
+                        <h5>Coming Soon</h5>
+                    </div>
+                </div>
+                <div class="card_meta flex flex_between">
+                    <span class="card_title font-decorative">Little Alchemy<br />Cookbook</span>
+                    <span class="card_sub">Algorithm Strategy<br />Course Assignment</span>
+                </div>
+            </a>
+
+            <a class="card" href="3d.html" data-tags="graphic-3d-design" data-pill="view">
+                <div class="thumb thumb-3d">
+                    <img src="assets/thumbnails/3D_Thumbnail.png" alt="3D Designs" onerror="this.remove()" />
+                </div>
+                <div class="card_meta flex flex_between">
+                    <span class="card_title font-decorative">3D Designs</span>
+                    <span class="card_sub">Some Fun Freelance Projects</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
