@@ -24,7 +24,10 @@ document.addEventListener("DOMContentLoaded", () => {
             projectCards.forEach((card) => {
                 const cardTag = card.getAttribute("data-tags");
                 if (selectedFilter === "all" || cardTag === selectedFilter) {
-                    card.style.display = "block";
+                    card.style.display = "";
+                    card.style.animation = "none";
+                    void card.offsetHeight; // trigger reflow for smooth re-animation
+                    card.style.animation = "";
                 } else {
                     card.style.display = "none";
                 }
