@@ -415,21 +415,50 @@ p,
 }
 
 .card {
+    position: relative;
     text-decoration: none;
     color: inherit;
     display: flex;
     flex-direction: column;
     gap: var(--space-xs);
     padding: var(--space-xs);
+    padding-top: calc(var(--space-3xs) + 2px);
     border-radius: var(--space-xs);
     background-color: transparent;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
-        border-color 0.25s cubic-bezier(0.16, 1, 0.3, 1),
-        box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
-        background-color 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    border: none;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     counter-increment: project;
     animation: cardFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.card_folder_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: visible;
+    z-index: 0;
+}
+
+.folder_path {
+    fill: #ffffff;
+    stroke: rgba(0, 0, 0, 0.08);
+    stroke-width: 1;
+    transition: fill 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+        stroke 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+        filter 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card:not(:has(.lock_project)):hover {
+    transform: translateY(-2px);
+}
+
+.card:not(:has(.lock_project)):hover .folder_path {
+    fill: #fafafa;
+    stroke: rgba(0, 0, 0, 0.18);
+    filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.06));
 }
 
 @keyframes cardFadeIn {
@@ -444,18 +473,19 @@ p,
     }
 }
 
-.card:not(:has(.lock_project)):hover {
-    border-color: rgba(0, 0, 0, 0.12);
-    background-color: #fafafa;
-    transform: translateY(-2px);
-    box-shadow: 0 12px 30px -15px rgba(0, 0, 0, 0.08);
+.card_header,
+.thumb,
+.card_body {
+    position: relative;
+    z-index: 1;
 }
 
 .card_header {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     padding: var(--space-3xs) var(--space-3xs) 0;
+    min-height: 28px;
 }
 
 .card_index_wrap {
@@ -492,6 +522,8 @@ p,
     font-size: clamp(0.72rem, 0.7rem + 0.08vw, 0.78rem);
     font-weight: 500;
     color: #888;
+    margin-top: 13px;
+    letter-spacing: 0.02em;
 }
 
 .card_status.is-locked {
