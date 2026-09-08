@@ -545,8 +545,46 @@ p,
     position: sticky;
     top: var(--space-l);
     align-self: start;
+    height: calc(100vh - var(--space-2xl));
     max-height: calc(100vh - var(--space-2xl));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     overflow-y: auto;
+}
+
+.sidebar_menu {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-s);
+}
+
+.sidebar_info {
+    margin-top: auto;
+    padding-top: var(--space-l);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-m);
+}
+
+.sidebar_info_item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3xs);
+}
+
+.sidebar_info_label {
+    font-family: "Margarine", sans-serif;
+    font-size: var(--step-0);
+    color: #111;
+    line-height: 1.2;
+}
+
+.sidebar_info_value {
+    font-size: var(--step--2);
+    font-weight: 400;
+    color: #333;
+    line-height: 1.4;
 }
 
 .side_nav a {
@@ -600,6 +638,9 @@ p,
 #ideate,
 #prototype,
 #test,
+#learning,
+#testing,
+#visualization,
 #takeaways {
     margin-bottom: var(--space-l);
 }
@@ -700,7 +741,7 @@ p,
     font-size: var(--step--2);
     color: gray;
     font-style: italic;
-    margin-bottom: var(--space-l);
+    /* margin-bottom: var(--space-l); */
     text-align: center;
 }
 
@@ -929,10 +970,19 @@ p,
     .sidebar {
         position: static;
         max-height: none;
+        height: auto;
     }
 
     .sidebar .side_nav {
         display: none;
+    }
+
+    .sidebar_info {
+        margin-top: var(--space-s);
+        padding-top: 0;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: var(--space-s) var(--space-l);
     }
 
     .two_images,
