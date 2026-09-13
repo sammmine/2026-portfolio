@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&family=Margarine&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="assets/Favicon_Pencil.png" />
+    <title>Melek - Gemastik XIX UX Design Submission</title>
+</head>
+
+<body class="site_project_containers melek">
+    <aside class="sidebar">
+        <div class="sidebar_menu">
+            <header class="back_nav font-decorative">
+                <a href="index.html#projects">← Back to Projects</a>
+            </header>
+            <nav class="side_nav font-primary">
+                <ul role="list">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#empathize">Empathize</a></li>
+                    <li><a href="#define">Define</a></li>
+                    <li><a href="#ideate">Ideate</a></li>
+                    <li><a href="#prototype">Prototype</a></li>
+                    <li><a href="#test">Test</a></li>
+                    <li><a href="#takeaways">Takeaways</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="sidebar_info font-primary">
+            <div class="sidebar_info_item">
+                <span class="sidebar_info_label font-decorative">Role</span>
+                <span class="sidebar_info_value">Team Lead, Product Designer</span>
+            </div>
+            <div class="sidebar_info_item">
+                <span class="sidebar_info_label font-decorative">Timeline</span>
+                <span class="sidebar_info_value">2 months (Jul-Aug 2026)</span>
+            </div>
+        </div>
+    </aside>
+
+    <div class="content">
+        <div class="project_title">
+            <h3>On Being Activists for Users</h3>
+        </div>
+
+        <section id="introduction" class="project_desc">
+            <img src="assets/melek/Photo_Melek.png" alt="Melek Cover" style="align-self: center; margin: 0 auto;">
+            <h4 class="font-decorative">Introduction</h4>
+            <p>Melek is a digital platform proposal we developed for the Gemastik XIX 2026 competition. The starting
+                point was simple: after Indonesia's 2024 General and Regional Elections were over, public interest in
+                tracking local officials' performance and policies dropped off almost entirely. We wanted to understand
+                what actually makes it so hard for people to follow their own local government—and whether there was a
+                more sensible way to close that gap.</p>
+            <div class="dd_section">
+                <figure class="image_caption">
+                    <a href="https://uxdesign.cc/how-to-solve-problems-applying-a-uxdesign-designthinking-hcd-or-any-design-process-from-scratch-v2-aa16e2dd550b"
+                        target="_blank">
+                        <img src="assets/melek/Design_Thinking.png" alt="Design_Thinking_Framework">
+                    </a>
+                    <figcaption class="img_caption font-decorative">Click the image to learn more about the framework!
+                    </figcaption>
+                </figure>
+                <p>We used the Design Thinking framework (Empathize–Define–Ideate–Prototype–Test) throughout, not as a
+                    methodology checkbox, but because we genuinely needed to move back and forth between research and
+                    design before committing to any solution.</p>
+            </div>
+        </section>
+
+        <section id="empathize" class="project_desc">
+            <h4 class="font-decorative">Empathize</h4>
+            <p>We started with a fairly honest question: why do so many people, even in major cities (even ourselves),
+                not know who
+                represents them in their regional council?</p>
+            <p>To find out, we spoke with several people, including a civic technology practitioner and co-creator of
+                Bijak Memilih. One thing that stuck with us from that conversation was when she said:</p>
+            <div class="highlight_box">
+                <p>"As designers, we are the activists of the users."</p>
+            </div>
+            <p>That line wasn't just a nice thing to hear. It was a reminder that civic tech doesn't end once a
+                prototype is done—it carries a real responsibility to genuinely represent people who often have little
+                access or voice in the systems that govern their lives.</p>
+            <p>Alongside that interview, we surveyed 59 respondents across several cities and provinces in Indonesia.
+                The results confirmed what we suspected:</p>
+            <div class="themes">
+                <div class="theme_box cols-3">
+                    <div class="theme_box_text">
+                        <h6>78%</h6>
+                        <p>Didn't know who their local council representative was.</p>
+                    </div>
+                    <div class="theme_box_text">
+                        <h6>85%</h6>
+                        <p>Stopped actively following officials' performance after the election.</p>
+                    </div>
+                    <div class="theme_box_text">
+                        <h6>72%</h6>
+                        <p>Found government information hard to access, with 65% citing a lack of centralization and 58%
+                            noting poor local relevance.</p>
+                    </div>
+                </div>
+            </div>
+
+            <p>To organize this more clearly, we built an Empathy Map from respondents' behavior and language. A few
+                patterns kept showing up:</p>
+
+            <div class="empathy_map">
+                <div class="empathy_grid">
+                    <div class="empathy_quadrant">
+                        <h5 class="empathy_title">Says</h5>
+                        <div class="empathy_notes">
+                            <div class="empathy_note">
+                                <p>“I don't even know who my local DPRD member is.”</p>
+                            </div>
+                            <div class="empathy_note">
+                                <p>“Policy information is scattered and the sources aren't clear.”</p>
+                            </div>
+                            <div class="empathy_note">
+                                <p>“I'd rather see something short or visual than read a long article.”</p>
+                            </div>
+                        </div>
+                        <p class="empathy_summary">Citizens struggle with basic representation awareness and fragmented
+                            policy sources.</p>
+                    </div>
+
+                    <div class="empathy_quadrant">
+                        <h5 class="empathy_title">Thinks</h5>
+                        <div class="empathy_notes cols-2">
+                            <div class="empathy_note">
+                                <p>“Looking up information takes too much effort—it's not worth it.”</p>
+                            </div>
+                            <div class="empathy_note">
+                                <p>“If it's too technical, I'll just skip it.”</p>
+                            </div>
+                        </div>
+                        <p class="empathy_summary">Citizens perceive governance tracking as high-effort, jargon-heavy,
+                            and not worth the time.</p>
+                    </div>
+
+                    <div class="empathy_quadrant">
+                        <h5 class="empathy_title">Feels</h5>
+                        <div class="empathy_notes cols-2">
+                            <div class="empathy_note">
+                                <p>Overwhelmed by complex, dense information.</p>
+                            </div>
+                            <div class="empathy_note">
+                                <p>Apathetic, feeling like they have no real impact on local issues.</p>
+                            </div>
+                        </div>
+                        <p class="empathy_summary">Citizens feel mentally overwhelmed and disconnected from regional
+                            policy decisions.</p>
+                    </div>
+
+                    <div class="empathy_quadrant">
+                        <h5 class="empathy_title">Does</h5>
+                        <div class="empathy_notes cols-2">
+                            <div class="empathy_note">
+                                <p>Rarely visits official government websites.</p>
+                            </div>
+                            <div class="empathy_note">
+                                <p>Relies on social media for updates, scrolling past without absorbing details.</p>
+                            </div>
+                        </div>
+                        <p class="empathy_summary">Citizens default to fast, passive social media scrolling rather than
+                            official portals.</p>
+                    </div>
+                </div>
+            </div>
+
+            <p>The pattern was clear: it wasn't that people didn't care. It was that the path to credible information
+                felt too far and too tiring to take on a regular basis.</p>
+        </section>
+
+        <section id="define" class="project_desc">
+            <h4 class="font-decorative">Define</h4>
+            <p>From this research, we narrowed things down to five core problems we wanted to address:</p>
+
+            <div class="pill_list">
+                <div class="pill_item">
+                    <strong>1</strong> — People struggle to identify the specific officials representing their region.
+                </div>
+                <div class="pill_item">
+                    <strong>2</strong> — Regional information is scattered across sources, not centralized, and hard to
+                    verify.
+                </div>
+                <div class="pill_item">
+                    <strong>3</strong> — Policy language is too technical for the general public to follow.
+                </div>
+                <div class="pill_item">
+                    <strong>4</strong> — People don't know the real, local impact of a given policy.
+                </div>
+                <div class="pill_item">
+                    <strong>5</strong> — There's no easy channel to keep following regional issues or share an opinion
+                    about them.
+                </div>
+            </div>
+
+            <p>We translated these into a User Persona and a User Journey Map, to make sure every feature we later
+                designed actually addressed a need surfaced by research—not one we assumed on our own.</p>
+
+            <p>The guiding questions we kept coming back to during design:</p>
+
+            <div class="hmw_container">
+                <div class="hmw_grid cols-2">
+                    <div class="hmw_card">
+                        <div class="hmw_badge">How Might We - 1</div>
+                        <div class="hmw_body">
+                            <p>How might we help people recognize their local officials in a simple way?</p>
+                        </div>
+                    </div>
+
+                    <div class="hmw_card">
+                        <div class="hmw_badge">How Might We - 2</div>
+                        <div class="hmw_body">
+                            <p>How might we turn scattered regional policy information into something concise and
+                                understandable?</p>
+                        </div>
+                    </div>
+
+                    <div class="hmw_card">
+                        <div class="hmw_badge">How Might We - 3</div>
+                        <div class="hmw_body">
+                            <p>How might we make information relevant to each user's location and needs?</p>
+                        </div>
+                    </div>
+
+                    <div class="hmw_card">
+                        <div class="hmw_badge">How Might We - 4</div>
+                        <div class="hmw_body">
+                            <p>How might we keep people engaged with local issues even after election season has passed?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ideate" class="project_desc">
+            <h4 class="font-decorative">Ideate</h4>
+            <div class="two_images">
+                <img src="assets/melek/Logo.png" alt="Melek Logo">
+                <p>Before jumping into features, we worked out the product's identity first. The name
+                    <strong>"Melek"</strong> means aware, informed, and understanding—in line with the product's goal of
+                    making people more aware of their local government. The logo takes the shape of an eye, representing
+                    the
+                    act of seeing, knowing, and watching, rendered in blue to convey credibility and trust.
+                </p>
+            </div>
+            <p>To explore ideas, we ran <strong>Crazy 8's</strong> sketching sessions and grouped our findings with an
+                <strong>Affinity Diagram</strong>. From that process, we settled on three approaches that became the
+                foundation of Melek's design:
+            </p>
+
+            <div class="themes">
+                <div class="theme_box cols-3">
+                    <div class="theme_box_text">
+                        <h6>A Regional Focus</h6>
+                        <p>Most existing transparency initiatives operate at the national level and only get attention
+                            around election time. Melek is built around the actual structure of local government, with
+                            ongoing coverage rather than seasonal spikes.</p>
+                    </div>
+                    <div class="theme_box_text">
+                        <h6>A Local Media Aggregator</h6>
+                        <p>Rather than becoming yet another news outlet, Melek pulls together and curates information
+                            from existing local sources, so people don't have to search across multiple places on their
+                            own.</p>
+                    </div>
+                    <div class="theme_box_text">
+                        <h6>AI/NLP Support</h6>
+                        <p>We use this to turn long, formal documents and news articles into points that are easier to
+                            read and understand.</p>
+                    </div>
+                </div>
+            </div>
+
+            <p>These three ideas came together in four main features: <strong>Kenal</strong> for officials' profiles and
+                track records, <strong>Pantau</strong> for a chronological feed of policies and activities,
+                <strong>Aspirasi</strong> as a space for discussion and citizen reviews, and <strong>Location-Based
+                    Personalization</strong> with timely notifications.
+            </p>
+        </section>
+
+        <section id="prototype" class="project_desc">
+            <h4 class="font-decorative">Prototype</h4>
+            <p>We took this from low-fidelity wireframes to an interactive prototype, supported by a design system
+                (colors, Instrument Sans typography, iconography, and components) to keep the interface consistent
+                across every feature.</p>
+            <figure class="image_caption">
+                <a href="https://www.figma.com/proto/AZbEiYklhwfEQgT15dtZi1/Melek---Gemastik-XIX-2026?node-id=121-5048&viewport=104%2C774%2C0.14&t=DUUjOyrVnFEAUXOc-9&scaling=scale-down&content-scaling=fixed&starting-point-node-id=121%3A5048&show-proto-sidebar=1&page-id=9%3A4"
+                    target="_blank">
+                    <img src="assets/melek/Prototype.jpg" alt="Melek Prototype">
+                </a>
+                <figcaption class="img_caption font-decorative">Click the image to see the interactive prototype!
+                </figcaption>
+            </figure>
+        </section>
+
+        <section id="test" class="project_desc">
+            <h4 class="font-decorative">Test</h4>
+            <p>We evaluated the prototype through a Heuristic Evaluation against Nielsen's ten usability principles,
+                plus two rounds of Usability Testing with participants, conducted asynchronously via Userberry.</p>
+            <p> In the first round, the prototype scored an SUS of 82 and an NPS of 40, with most tasks completed
+                successfully. Then, in the second round, every task was completed successfully, with the SUS score
+                rising to 83 and the NPS increasing to 80.</p>
+            <p>Based on feedback, we made three key fixes:</p>
+            <div class="themes">
+                <div class="theme_box cols-3">
+                    <div class="theme_box_text">
+                        <h6>WhatsApp Login</h6>
+                        <p>Added a WhatsApp login option for faster and more accessible authentication.</p>
+                    </div>
+                    <div class="theme_box_text">
+                        <h6>Manual Location Update</h6>
+                        <p>Added a dedicated page allowing users to manually set and adjust their location.</p>
+                    </div>
+                    <div class="theme_box_text">
+                        <h6>Review Reporting</h6>
+                        <p>Added a way for users to report reviews and comments considered inappropriate.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="takeaways" class="project_desc">
+            <h4 class="font-decorative">Takeaways</h4>
+            <p>Even though testing showed clear progress in usability, Melek didn't make it to
+                the finals of Gemastik XIX 2026.</p>
+            <p>That outcome taught us something important: testing a solution for usability alone isn't enough. Before
+                getting to that stage, we needed to interrogate the problem space itself far more detail—whether the
+                problem we identified genuinely called for a new app, or could have been answered in a way that fit more
+                closely into habits people already had. Questions like that should be asked earlier and in more depth,
+                rather than assumed away simply because the team already had a solution direction it was excited to
+                build.</p>
+            <p>This process reminded us that good research isn't just about gathering data to justify an idea we've
+                already committed to—it's about the discipline to keep checking whether the direction we're taking
+                actually comes from what users need, or from our own assumptions about what a solution "should" look
+                like. But hey, still it was fun.</p>
+        </section>
+
+    </div>
+
+
+
+</body>

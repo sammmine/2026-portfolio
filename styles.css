@@ -829,10 +829,52 @@ p,
     --theme-box-text: var(--highlight-text);
 }
 
+.melek {
+    --highlight-bg: #005FBF;
+    --highlight-text: #fff;
+    --theme-box-bg: var(--highlight-bg);
+    --theme-box-text: var(--highlight-text);
+    --empathy-bg: #EAF2FC;
+    --empathy-border: #7EA6E0;
+    --empathy-title: #004791;
+    --empathy-note-bg: #CBE0F8;
+    --empathy-note-text: #0f172a;
+    --hmw-badge-bg: #005FBF;
+}
+
 .highlight_box p {
     color: var(--highlight-text, #fff);
     font-weight: 600;
     text-align: center;
+}
+
+/* Pill / Capsule List */
+.pill_list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2xs);
+    width: 100%;
+}
+
+.pill_item {
+    border: 1px solid #1a1a1a;
+    border-radius: 999px;
+    padding: var(--space-2xs) var(--space-m);
+    background-color: #ffffff;
+    font-size: var(--step--1);
+    line-height: 1.5;
+    color: #1a1a1a;
+}
+
+.pill_item strong {
+    font-weight: 700;
+}
+
+@media (max-width: 600px) {
+    .pill_item {
+        border-radius: 20px;
+        padding: var(--space-2xs) var(--space-s);
+    }
 }
 
 .themes {
@@ -964,6 +1006,10 @@ p,
     min-width: 0;
 }
 
+.empathy_notes.cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .empathy_note {
     min-width: 0;
     box-sizing: border-box;
@@ -1047,6 +1093,14 @@ p,
 
 .hmw_card:nth-child(5) {
     grid-column: 4 / span 2;
+}
+
+.hmw_grid.cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.hmw_grid.cols-2 .hmw_card {
+    grid-column: span 1 !important;
 }
 
 .hmw_badge {
